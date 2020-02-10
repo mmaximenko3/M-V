@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import android.util.Patterns
 import java.util.regex.Pattern
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         btn_login = findViewById(R.id.button_) as Button;
         eT_email = findViewById(R.id.email_) as TextInputLayout;
