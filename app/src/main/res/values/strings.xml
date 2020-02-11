@@ -8,4 +8,6 @@
     <string name="welcome">Welcome back, friend!</string>
     <string name="remember">Remember me</string>
     <string name="forgot">Forgot password?</string>
+    <string name="sign"><u>Sign Up</u></string>
+    <string name="don_t">Don_t have any account?</string>
 </resources>

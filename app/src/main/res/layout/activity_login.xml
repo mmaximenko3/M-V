@@ -31,7 +31,7 @@
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="295dp"
+            android:layout_width="260dp"
             android:layout_height="45dp"
             android:background="@null"
             android:layout_gravity="center"
@@ -51,7 +51,7 @@
         android:layout_marginTop="-4dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="295dp"
+            android:layout_width="260dp"
             android:layout_height="45dp"
             android:background="@null"
             android:layout_gravity="center"
@@ -103,44 +103,75 @@
             android:textColor="@color/colorWhite"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="25sp"></Button>
+            android:textSize="25sp">
+        </Button>
 
-        <TextView
+        <Button
+            android:id="@+id/forgot_password"
             android:textAlignment="center"
-            android:layout_marginTop="5dp"
             android:layout_gravity="right"
             android:layout_marginRight="20dp"
             android:layout_width="150dp"
             android:textColor="@color/colorWhite"
             android:textSize="16sp"
             android:layout_height="wrap_content"
-            android:text="@string/forgot">
-        </TextView>
+            android:text="@string/forgot"
+            android:background="@color/transp"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"
+            android:textStyle="normal">
+        </Button>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:layout_marginTop="10dp">
 
+
         <TextView
-            android:textAlignment="center"
-            android:layout_marginTop="5dp"
+            android:layout_width="195dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
-            android:layout_width="150dp"
+            android:layout_marginLeft="70dp"
+            android:text="@string/don_t"
+            android:textAlignment="center"
             android:textColor="@color/colorWhite"
-            android:textSize="16sp"
-            android:layout_height="wrap_content"
-            android:text="@string/forgot">
+            android:textSize="16sp">
         </TextView>
 
-
+        <Button
+            android:id="@+id/sign_up"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@color/transp"
+            android:text="@string/sign"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:textStyle="normal">
+        </Button>
 
     </LinearLayout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy_policy"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textColor="@color/dark"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </TextView>
 
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
