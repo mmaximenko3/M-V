@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         )
         setContentView(R.layout.activity_login)
 
-        btn_login = findViewById(R.id.button_) as Button;
+        btn_login = findViewById(R.id.login_) as Button;
         eT_email = findViewById(R.id.email_) as TextInputLayout;
         eT_password = findViewById(R.id.password_) as TextInputLayout;
 

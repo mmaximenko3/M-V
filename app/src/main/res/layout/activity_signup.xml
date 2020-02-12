@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/text"
+        android:text="@string/sign2"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="35sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rectangle_right"
+        android:layout_gravity="center"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:layout_marginStart="15dp"
+            android:hint="@string/username_"
+            android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_"
+        android:layout_gravity="center"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="-4dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:layout_marginStart="15dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirm_password_"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_"
+        android:layout_gravity="center"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="-4dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="290dp"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:layout_marginStart="15dp"
+            android:hint="@string/confirm"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-4dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle_left">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/yes18_"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yes"
+                android:layout_gravity="center"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/create_"
+            android:layout_width="265dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_"
+            android:fontFamily="@font/shrift_max"
+            android:onClick="Najmi"
+            android:text="@string/create"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

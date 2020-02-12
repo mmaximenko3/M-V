@@ -9,5 +9,16 @@
     <string name="remember">Remember me</string>
     <string name="forgot">Forgot password?</string>
     <string name="sign"><u>Sign Up</u></string>
+    <string name="sign2">Sign Up</string>
     <string name="don_t">Don_t have any account?</string>
+    <string name="username_">Username</string>
+    <string name="confirm">Confirm password</string>
+    <string name="yes">Yes, I am 18</string>
+    <string name="create">Create</string>
+    <string name="question1">Do you like communication?</string>
+    <string name="question2">Do you want to find a friend?</string>
+    <string name="sorry">Sorry, we did not find anyone</string>
+    <string name="try_"><u>Try again </u></string>
+    <string name="yesq">Yes</string>
+    <string name="noq">No</string>
 </resources>
