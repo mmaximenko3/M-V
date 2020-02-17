@@ -6,4 +6,6 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="transp">#0000</color>
     <color name="dark">#0f0f0f</color>
+    <color name="red">#FF0000</color>
+    <color name="light">#808080</color>
 </resources>
