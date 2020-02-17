@@ -35,51 +35,7 @@ class MainActivity : AppCompatActivity() {
         val et_password = findViewById<TextInputLayout>(R.id.password_)
 
         button_login.setOnClickListener(View.OnClickListener {
-            /*val email: String = et_email.editText?.text.toString()
-            val password: String = et_password.editText?.text.toString()
-
-            val validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-                    "\\@" + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-                    "(" + "\\." + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" + ")+"
-            val validpassword = "(?=.*[a-zA-Z])" +      //любая буква
-                    "(?=.*[@#$%^&+=])" +    //не менее 1 специального символа
-                    ".{5,}" +               //не менее 4 символов
-                    "$"
-            val matcher1: Matcher
-            matcher1 = Pattern.compile(validemail).matcher(email)
-
-            val matcher2: Matcher
-            matcher2 = Pattern.compile(validpassword).matcher(password)
-
-            if (matcher1.matches() && matcher2.matches()) {
-                et_email.setErrorEnabled(false)
-                et_password.setErrorEnabled(false)
-                val progressDialog = ProgressDialog(this)
-                progressDialog.setMessage("Loading please wait")
-                progressDialog.setCancelable(false)
-                progressDialog.show()
-                Handler().postDelayed({ progressDialog.dismiss() }, 3500)
-            } else if (et_email.editText?.text.toString().equals("")) {
-                et_email.setError("Введите e-mail")
-            } else {
-                et_email.setError("Не действительный e-mail")
-            }
-
-
-            if (matcher1.matches() && matcher2.matches()) {
-                et_email.setErrorEnabled(false)
-                et_password.setErrorEnabled(false)
-                val progressDialog = ProgressDialog(this)
-                progressDialog.setMessage("Loading please wait")
-                progressDialog.setCancelable(false)
-                progressDialog.show()
-                Handler().postDelayed({ progressDialog.dismiss() }, 3500)
-            } else if (et_password.editText?.text.toString().equals("")) {
-                et_password.setError("Введите пароль")
-            } else {
-                et_password.setError("Не верный пароль")
-            }*/
-
+            
             val email: String = et_email.editText?.text.toString()
             val validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                     "\\@" + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
