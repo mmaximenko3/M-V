@@ -21,5 +21,17 @@
     <string name="try_"><u>Try again </u></string>
     <string name="yesq">Yes</string>
     <string name="noq">No</string>
+    <string name="doorreg">Вы перешли в окно регестрации</string>
+    <string name="doorquestion1">Вы перешли к вопросу №1</string>
+    <string name="load">Loading please wait</string>
+    <string name="tryagain">Something went wrong. Login or password is invalid. Please try again...</string>
+    <string name="paswwod">Введите пароль</string>
+    <string name="pasneverno">Не верный пароль</string>
+    <string name="emailwwod">Введите e-mail</string>
+    <string name="emailneverno">Не действительный e-mail</string>
+    <string name="namewwod">Введите имя пользователя</string>
+    <string name="nameneverno">Не верное имя пользователя</string>
+    <string name="pasnesovp">Пароли не совпадают</string>
     <string name="link_string">https://google.com</string>
+    <string name="colorrrr">Меняем цвет кнопки на красный?</string>
 </resources>

@@ -9,7 +9,6 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/frame_login"
         android:layout_width="294dp"
         android:layout_height="94dp"
         android:layout_gravity="center"
@@ -23,7 +22,7 @@
         android:textSize="30sp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_"
+        android:id="@+id/email"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -43,7 +42,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_"
+        android:id="@+id/passwordLogin"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -77,7 +76,7 @@
             android:orientation="horizontal">
 
             <CheckBox
-                android:id="@+id/remeber_"
+                android:id="@+id/remeber"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -119,14 +118,14 @@
             android:layout_width="195dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
-            android:layout_marginStart="70dp"
+            android:layout_marginStart="65dp"
             android:text="@string/don_t"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/sign_up"
+            android:id="@+id/signUp"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="65dp"
             android:layout_height="25dp"
@@ -145,7 +144,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/privacy_policy"
+            android:id="@+id/privacyPolicy"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="150dp"
             android:layout_height="wrap_content"

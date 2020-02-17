@@ -6,105 +6,93 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.widget.Button
 import android.widget.Toast
 import java.util.regex.Pattern
 import com.google.android.material.textfield.TextInputLayout
-import android.widget.CheckBox
 import java.util.regex.Matcher
-import androidx.core.app.ComponentActivity
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.os.Handler
 
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        val buttonLogin = findViewById<Button>(R.id.login)
+        val buttonSignUp = findViewById<Button>(R.id.signUp)
+        val buttonPrivacyPolicy = findViewById<Button>(R.id.privacyPolicy)
+        val etEmail = findViewById<TextInputLayout>(R.id.email)
+        val etPassword = findViewById<TextInputLayout>(R.id.passwordLogin)
 
-        val button_login = findViewById<Button>(R.id.login)
-        val button_signUp = findViewById<Button>(R.id.sign_up)
-        val button_privacy_p = findViewById<Button>(R.id.privacy_policy)
-        val cb_remember = findViewById<CheckBox>(R.id.remeber_)
-        val et_email = findViewById<TextInputLayout>(R.id.email_)
-        val et_password = findViewById<TextInputLayout>(R.id.password_)
+        buttonLogin.setOnClickListener(View.OnClickListener {
 
-        button_login.setOnClickListener(View.OnClickListener {
-            
-            val email: String = et_email.editText?.text.toString()
+            val email: String = etEmail.editText?.text.toString()
             val validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                     "\\@" + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
                     "(" + "\\." + "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" + ")+"
             val matcher1: Matcher
             matcher1 = Pattern.compile(validemail).matcher(email)
+            val emailWwod = getString(R.string.emailwwod)
+            val emailNeverno = getString(R.string.emailneverno)
 
             if (matcher1.matches()) {
-                et_email.setErrorEnabled(false)
-            } else if (et_email.editText?.text.toString().equals("")) {
-                et_email.setError("Введите e-mail")
+                etEmail.setErrorEnabled(false)
+            } else if (etEmail.editText?.text.toString().equals("")) {
+                etEmail.setError(emailWwod)
             } else {
-                et_email.setError("Не действительный e-mail")
+                etEmail.setError(emailNeverno)
             }
 
-            val password: String = et_password.editText?.text.toString()
-            val validpassword = "(?=.*[a-zA-Z])" +      //любая буква
-                    "(?=.*[@#$%^&+=])" +    //не менее 1 специального символа
-                    ".{4,}" +               //не менее 4 символов
-                    "$"
+            val password: String = etPassword.editText?.text.toString()
+            val validpassword = ".{4,}" + "$"//не менее 4 символов
+
             val matcher2: Matcher
             matcher2 = Pattern.compile(validpassword).matcher(password)
+            val pasWwod = getString(R.string.paswwod)
+            val pasNeverno = getString(R.string.pasneverno)
 
             if (matcher2.matches()) {
-                et_password.setErrorEnabled(false)
-            } else if (et_password.editText?.text.toString().equals("")) {
-                et_password.setError("Введите пароль")
+                etPassword.setErrorEnabled(false)
+            } else if (etPassword.editText?.text.toString().equals("")) {
+                etPassword.setError(pasWwod)
             } else {
-                et_password.setError("Не верный пароль")
+                etPassword.setError(pasNeverno)
             }
 
             if (matcher1.matches() && matcher2.matches()) {
                 val progressDialog = ProgressDialog(this)
-                progressDialog.setMessage("Loading please wait")
+                val Load = getString(R.string.load)
+                val tryAgain = getString(R.string.tryagain)
+                progressDialog.setMessage(Load)
                 progressDialog.setCancelable(false)
                 progressDialog.show()
-                Handler().postDelayed({ progressDialog.dismiss() }, 3500)
-                //тут я не знаю, как сделать задержку, чтобы тост срабатывал после загрузчика
-
-                Toast.makeText(getApplicationContext(), "Something went wrong. Login or password is invalid. Please try again...", Toast.LENGTH_SHORT).show();
+                Handler().postDelayed({
+                    progressDialog.dismiss();Toast.makeText(
+                    getApplicationContext(),
+                    tryAgain,
+                    Toast.LENGTH_LONG
+                ).show();
+                }, 3500)
             }
-
         })
 
-        button_signUp.setOnClickListener(View.OnClickListener {
+        buttonSignUp.setOnClickListener(View.OnClickListener {
 
+            val doorReg = getString(R.string.doorreg)
             val singUp_intent = Intent(this@MainActivity, SingupActivity::class.java)
             startActivity(singUp_intent);
-            Toast.makeText(
-                getApplicationContext(),
-                "Вы перешли в окно регестрации",
-                Toast.LENGTH_SHORT
-            ).show();
+            Toast.makeText(getApplicationContext(), doorReg, Toast.LENGTH_SHORT).show();
 
         })
 
-        button_privacy_p.setOnClickListener(View.OnClickListener {
+        buttonPrivacyPolicy.setOnClickListener(View.OnClickListener {
             val link = getString(R.string.link_string)
             val intentBtnPwr = Intent(Intent.ACTION_VIEW, Uri.parse(link))
             startActivity(intentBtnPwr)
         })
 
-        cb_remember.setOnClickListener(View.OnClickListener {
-            if (cb_remember.isChecked) {
-                Toast.makeText(getApplicationContext(), "true", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(getApplicationContext(), "false", Toast.LENGTH_SHORT).show();
-            }
-        })
     }
 
 
