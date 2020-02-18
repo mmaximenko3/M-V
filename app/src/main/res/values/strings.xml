@@ -32,7 +32,6 @@
     <string name="nameneverno">Не верное имя пользователя</string>
     <string name="pasnesovp">Пароли не совпадают</string>
     <string name="link_string">https://google.com</string>
-    <string name="no">Нажата кнопка {no}!</string>
-    <string name="back">Вы вернулись в окно входа</string>
+    <string name="no">Нажата кнопка (no)!</string>
     <string name="nachnem">Start the survey?</string>
 </resources>

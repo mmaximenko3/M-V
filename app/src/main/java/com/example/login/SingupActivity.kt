@@ -68,7 +68,7 @@ class SingupActivity : AppCompatActivity() {
                 } else {
 
                     val question1_intent =
-                        Intent(this@SingupActivity, QuestionActivity::class.java)
+                        Intent(this@SingupActivity, QuestionnewActivity::class.java)
                     val doorQuestion = getString(R.string.doorquestion)
                     if (cb18old.isChecked) {
                         buttonCreate.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_));
