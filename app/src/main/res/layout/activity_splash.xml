@@ -5,16 +5,16 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg">
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/sweet_voice"
-    android:fontFamily="@font/text"
-    android:textColor="@color/colorWhite"
-    android:layout_marginTop="215dp"
-    android:layout_gravity="center"
-    android:textAlignment="center"
-    android:textSize="35sp">
-</TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sweet_voice"
+        android:fontFamily="@font/text"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="215dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="35sp">
+    </TextView>
 
 </LinearLayout>

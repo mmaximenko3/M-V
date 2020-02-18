@@ -1,12 +1,17 @@
 package com.example.login
 
+import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.widget.Toast
 
-class Question1Activity : AppCompatActivity() {
+class SorryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_question1)
+        setContentView(R.layout.activity_sorry)
+
+
     }
 }

@@ -1,10 +1,8 @@
 package com.example.login
 
-import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
@@ -18,6 +16,7 @@ class SingupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_singup)
+
 
         val buttonCreate = findViewById<Button>(R.id.create)
         val etUserName = findViewById<TextInputLayout>(R.id.userName)
@@ -68,12 +67,20 @@ class SingupActivity : AppCompatActivity() {
                     Toast.makeText(getApplicationContext(), nameWwod, Toast.LENGTH_SHORT).show();
                 } else {
 
-                    val doorQuestion1 = getString(R.string.doorquestion1)
                     val question1_intent =
-                        Intent(this@SingupActivity, Question1Activity::class.java)
-                    startActivity(question1_intent);
-                    Toast.makeText(getApplicationContext(), doorQuestion1, Toast.LENGTH_SHORT)
-                        .show();
+                        Intent(this@SingupActivity, QuestionActivity::class.java)
+                    val doorQuestion = getString(R.string.doorquestion)
+                    if (cb18old.isChecked) {
+                        buttonCreate.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_));
+                        startActivity(question1_intent);
+                        Toast.makeText(getApplicationContext(), doorQuestion, Toast.LENGTH_SHORT)
+                            .show();
+                    } else {
+                        buttonCreate.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_2));
+                        startActivity(question1_intent);
+                        Toast.makeText(getApplicationContext(), doorQuestion, Toast.LENGTH_SHORT)
+                            .show();
+                    }
                 }
             } else {
                 etPasswordConfirm.setError(pasNesovp)
@@ -81,11 +88,6 @@ class SingupActivity : AppCompatActivity() {
 
         })
 
-        cb18old.setOnClickListener(View.OnClickListener {
-            val coloRRR = getString(R.string.colorrrr)
-            Toast.makeText(getApplicationContext(), coloRRR, Toast.LENGTH_SHORT)
-                .show();
-        })
     }
 
 }

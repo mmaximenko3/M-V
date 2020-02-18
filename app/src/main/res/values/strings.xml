@@ -15,14 +15,13 @@
     <string name="confirm">Confirm password</string>
     <string name="yes">Yes, I am 18</string>
     <string name="create">Create</string>
-    <string name="question1">Do you like communication?</string>
-    <string name="question2">Do you want to find a friend?</string>
     <string name="sorry">Sorry, we did not find anyone</string>
     <string name="try_"><u>Try again </u></string>
     <string name="yesq">Yes</string>
     <string name="noq">No</string>
     <string name="doorreg">Вы перешли в окно регестрации</string>
-    <string name="doorquestion1">Вы перешли к вопросу №1</string>
+    <string name="doorquestion">Вы перешли в окно вопросов</string>
+    <string name="doorload">Вы перешли на экран загрузки</string>
     <string name="load">Loading please wait</string>
     <string name="tryagain">Something went wrong. Login or password is invalid. Please try again...</string>
     <string name="paswwod">Введите пароль</string>
@@ -33,5 +32,7 @@
     <string name="nameneverno">Не верное имя пользователя</string>
     <string name="pasnesovp">Пароли не совпадают</string>
     <string name="link_string">https://google.com</string>
-    <string name="colorrrr">Меняем цвет кнопки на красный?</string>
+    <string name="no">Нажата кнопка {no}!</string>
+    <string name="back">Вы вернулись в окно входа</string>
+    <string name="nachnem">Start the survey?</string>
 </resources>
